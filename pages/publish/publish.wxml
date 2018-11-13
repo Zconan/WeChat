@@ -1,0 +1,35 @@
+<view wx:if="{{isShow}}">
+  <view class="row">
+    <label class="title">我的地址</label>
+    <view class="info" bindtap="handleGetAddress">{{address}}</view>
+  </view>
+  <view class="row">
+    <label class="title">类型</label>
+    <view class="info">
+      <radio-group bindchange="handleTrade">
+          <radio value="buy" />求购
+          <radio value="sale" />转让
+      </radio-group>
+    </view>
+  </view>
+  <view class="row">
+    <label class="title">说明</label>
+    <view class="info">
+      <input bindblur="handleExplain" placeholder="填写您的具体需求" />
+    </view>
+  </view>
+  <view class="row">
+    <label class="title">联系方式</label>
+    <view class="info">
+      <input bindblur="handlePhone" placeholder="填写您的联系方式" />
+    </view>
+  </view>
+  <view class="btn" bindtap="handleSubmit">发布信息</view>
+</view>
+<view wx:if="{{!isShow}}">
+  <view class="success">
+    <icon type="success" size="20"/>
+    <text>恭喜您，发布成功</text>
+  </view>
+  <navigator class="skip" url="/pages/index/index">点击进入首页</navigator>
+</view>

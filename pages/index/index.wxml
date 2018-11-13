@@ -1,0 +1,8 @@
+<view class="map-container">
+  <map id="map" class="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location controls="{{controls}}" bindcontroltap="handleAutoLocation" markers="{{markers}}">
+  </map>
+</view>
+<view class="btns">
+  <navigator class="btn" url="/pages/publish/publish">发布</navigator>
+  <navigator class="btn" url="/pages/publish/publish">搜索</navigator>
+</view>
